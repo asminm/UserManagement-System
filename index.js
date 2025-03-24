@@ -19,7 +19,7 @@ app.use(session({
 })),
 
 
-    app.set('views', path.join(__dirname, "views"))
+app.set('views', path.join(__dirname, "views"))
 app.set('view engine', 'hbs')
 app.use(express.static("public"))
 
@@ -34,6 +34,6 @@ connectDB();
 
 
 app.listen(2000, () => {
-    console.log("server start");
+    console.log("server start in 2000");
 
 });
