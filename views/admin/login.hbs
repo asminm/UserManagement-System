@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<link rel="stylesheet" href="/style/adminlogin.css">
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<div class="login-page">
+  <div class="form">
+    <h2>Admin Login</h2>
+    <form class="login-form" action="/admin/login" method="post">
+      <input type="text" id="message" value="{{{message}}}" name="message" hidden>
+      <input type="text" placeholder="Eamil or Phone" id="username" name="email" required />
+
+      <input type="password" placeholder="password" id="password" name="password" required />
+
+      <button>login</button>
+    
+    </form>
+  </div>
+</div>
+<script>
+
+  const message = document.getElementById('message').value;
+
+  if (message) {
+    swal(message)
+  }
+</script>
+
+</html>
